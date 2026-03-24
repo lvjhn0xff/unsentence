@@ -1,0 +1,265 @@
+TYPE: Cardset 
+
+TRAITS: 
+    - Reversed 
+
+ITEMS:
+    - Front: MITC01 
+      Back: Technology and Project Management
+      Chapter-Label: Chapter-Number
+      Chapters:
+        - Introduction to Project Management (Part 1)
+        - Introduction to Project Management (Part 2) 
+        - Sub-Items:
+            Project Scope Management 
+            Project Time Management 
+            Project Time Scheduling 
+        - Project Cost Management 
+        - Project Human Resource Management 
+        - Project Project Quality Management 
+        - Project Communications Management 
+        - Project Risk Management 
+
+    - Front: MITC02 
+      Back: Advanced Database Systems 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Database Application Development 
+        - Data Warehousing 
+        - Data Quality and Integration 
+        - Big Data and Analytics 
+    
+    - Front: MITC03 
+      Back: Advanced System Design and Implementation 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Assuming the Role of the System Analyst 
+        - Understanding Organization Style and Its Impact on Information Systems 
+        - Determining Feasibility and Managing Analysis and Design Activities 
+        - Information Gathering - Interactive Methods 
+        - Information Gathering - Unobtrusive Methods 
+        - Prototyping, Rad, and Extreme Programming 
+        - Using Data Flow Diagrams 
+        - Systems Requirements Analysis and Design 
+        - Describing Process Specifications and Structured Decisions 
+        - System Design Techniques 
+        - Designing Effective Output 
+        - Designing Effective Input  
+    
+
+    - Front: MITC04 
+      Back: Advanced Operating Sytems and Networking 
+      Chapter-Label: Chapter-Number 
+      Parts: 
+        - Part-Name: Background
+          Chapters: 
+            - Computer System Overview 
+            - Operating System Overview 
+        - Part-Name: Processes
+          Chapters: 
+            - Process Description and Control 
+            - Threads 
+            - Concurrency - Mutual Exclusion and Synchronization 
+            - Concurrency - Deadlock and Starvation 
+        - Part-Name: Memory 
+          Chapters: 
+            - Memory Management 
+            - Virtual Memory 
+        - Part-Name: Scheduling 
+          Chapters: 
+            - Uniprocessor Scheduling 
+            - Multiprocessor, Multicore, and Real-Time Scheduling 
+        - Part-Name: Input/Output and Files 
+          Chapters: 
+            - I/O Management and Disk Scheduling 
+            - File Management 
+        - Part-Name: Embedded Systems 
+          Chapters: 
+            - Embedded Operating Systems 
+            - Virtual Machines 
+            - Operating System Security 
+            - Cloud and IoT Operating Systems 
+        - Part-Name: Online Chapters 
+          Chapters: 
+            - Network Protocols 
+            - Distributed Processing, Client/Server, and Clusters 
+            - Distributed Process Management 
+            - Overview and Probability and Stochastic Processes 
+            - Queuing Analysis 
+        - Part Name: Appendices 
+          Chapter-Label: Appendix-Letters   
+          Appendix: true       
+          Chapters: 
+            - Topics in Concurrency 
+            - Programming Projects and Operating System Projects 
+            - Topics in Computer Organization 
+            - Object-oriented Design 
+            - Amhdahl's Law 
+            - Hash Tables 
+            - Response Time 
+            - Queuing System Concepts 
+            - The Complexity of Algorithms 
+            - Disk Storage Devices 
+            - Cryptographic Algorithms 
+            - Standards Organizations 
+            - Sockets - A Programmer's Introduction 
+            - The International Reference Alphabet 
+            - BACI - The Ben-Ari Concurrent Programing System 
+            - Procedure Control 
+            - ECOS-Q1
+
+    - Front: MITS01 
+      Back: Advanced Client-Server Computing 
+
+    - Front: MITS02 
+      Back: Human Computer Interaction
+
+    - Front: MITS03 
+      Back: Object-oriented Design Patterns 
+      Chapter-Label: Part-Number 
+      Parts:
+        - Part-Name: Introduction 
+          Chapters: 
+            - What is a Design Pattern? 
+            - Design Patterns in Smalltalk MVC 
+            - Describing Design Patterns 
+            - The Catalog of Design Patterns 
+            - Organizing the Catalog 
+            - How Design Patterns Solve Design Problems 
+            - How to Select a Design Pattern 
+            - How to Use a Design Pattern 
+        - Part-Name: A Case Study 
+          Chapters: 
+            - Design Problems 
+            - Document Structure 
+            - Formatting 
+            - Embellishing the User Interface 
+            - Supporting Multiple Look-and-Feel Standards 
+            - Supporting Multiple Window Systems 
+            - User Operation 
+            - Spelling Checking and Hyphenations 
+            - Summary 
+        - Part-Name: Creational Patterns
+          Chapters: 
+            - Abstract Factory 
+            - Builder 
+            - Factory Method
+            - Prototype 
+            - Singleton
+            - Discussion of Creational Patterns 
+        - Part-Name: Structural Patterns
+          Chapters: 
+            - Adapter 
+            - Bridge
+            - Composite
+            - Decorator
+            - Facade
+            - Flyweight
+            - Proxy 
+            - Discussion of Structural Patterns 
+        - Part-Name: Behavioral Patterns
+          Chapters: 
+            - Chain of Responsibility
+            - Command
+            - Interpreter
+            - Iterator
+            - Mediator
+            - Memento
+            - Observer
+            - State
+            - Strategy
+            - Template Method 
+            - Visitor
+            - Discussion of Behavioral Patterns
+        - Part-Name: Conclusion 
+          Chapters: 
+            - What to Expect from Design Patterns
+            - A Brief History 
+            - The Pattern Community 
+            - An Invitation
+            - A Parting Thought
+        - Part-Name: Glossary 
+          Chapters: 
+            - Glossary  
+        - Part-Name: Guide to Notation 
+          Chapters: 
+            - Class Diagram 
+            - Object Diagram 
+            - Interaction Diagram 
+        - Part-Name: Foundation Classes 
+          Chapters: 
+            - List Class 
+            - Iterator Class 
+            - ListIterator Class 
+            - Point Class 
+            - Rect Class  
+    
+    - Front: MITS04 
+      Back: Web Engineering 
+    
+    - Front: MITS05
+      Back: Mobile Applications Development 
+      Chapters: 
+        - Web-Based Systems 
+        - Web Engineering 
+        - A Web Engineering Process
+        - Communication 
+        - Planning 
+        - The Modeling Activity 
+        - Analysis Modeling for WebApps 
+        - WebApp Design 
+        - Interaction Design
+        - Information Design 
+        - Functional Design 
+        - Construction and Deployment 
+        - Design Patterns 
+        - Technologies and Tools 
+        - Testing WebApps 
+        - Change and Content Management 
+        - Future Directions  
+      Extra-Chapters:
+        - The Software Process 
+        - Process Models 
+        - Agility and Process
+        - Recommended Process Model
+        - Human Aspects of SE
+       
+    - Front: MITS06
+      Back: Network Administration and Maintenance 
+      Chapter-Label: Chapter-Number 
+      Parts: 
+        - Part-Name: Introduction 
+          Chapters: 
+            - Introduction to Data Communications
+
+        - Part-Name: Fundamental Concept  
+          Chapters: 
+            - Application Layer
+            - Physical Layer
+            - Data Link Layer
+            - Network and Transport Layers
+
+        - Part-Name: Network Technologies  
+          Chapters: 
+            - Wired and Wireless Local Area Networks
+            - Backbone Networks
+            - Wide Area Networks
+            - The Internet
+
+        - Part-Name: Network Management  
+          Chapters: 
+            - Network Security
+            - Network Design
+            - Network Management
+
+        - Part-Name: Appendices 
+          Appendix: True 
+          Chapters: 
+            - Connector Cables
+            - Spanning Tree Protocol
+            - IP Telephony
+            - Cellular Technologies
+            - TCP/IP Game
+            - Windows Server
+    
+

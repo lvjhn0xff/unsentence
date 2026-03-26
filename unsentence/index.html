@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Mastery App</title>
+    <style>
+        :root { 
+            --primary: #2563eb; --bg: #f1f5f9; --text: #0f172a; 
+            --success: #16a34a; --error: #dc2626;
+        }
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background: var(--bg); color: var(--text); 
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; margin: 0;
+        }
+        .container { 
+            background: white; padding: 2.5rem; border-radius: 16px; 
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); 
+            width: 90%; max-width: 550px; 
+        }
+        .hidden { display: none !important; }
+        
+        h2 { margin-top: 0; color: var(--primary); text-align: center; }
+        p { text-align: center; color: #64748b; }
+        
+        textarea, input { 
+            width: 100%; padding: 1rem; border: 2px solid #e2e8f0; 
+            border-radius: 8px; margin: 1rem 0; box-sizing: border-box; 
+            font-size: 1.1rem; transition: all 0.2s;
+        }
+        textarea:focus, input:focus { outline: none; border-color: var(--primary); background: #fff; }
+        
+        button { 
+            background: var(--primary); color: white; border: none; 
+            padding: 1rem; border-radius: 8px; cursor: pointer; 
+            width: 100%; font-weight: 700; font-size: 1rem;
+            text-transform: uppercase; transition: transform 0.1s;
+        }
+        button:active { transform: scale(0.98); }
+
+        .card { 
+            text-align: center; padding: 2rem; background: #f8fafc;
+            border-radius: 12px; margin-bottom: 1rem; border: 1px solid #e2e8f0;
+        }
+        .cue { font-size: 4.5rem; font-weight: 800; color: var(--primary); margin: 0; line-height: 1; }
+        .feedback { 
+            margin-top: 1rem; font-weight: 600; min-height: 2.5rem; 
+            padding: 0.8rem; border-radius: 6px; text-align: center;
+        }
+        .wrong { color: var(--error); background: #fee2e2; border: 1px solid #fecaca; }
+        .correct { color: var(--success); background: #dcfce7; border: 1px solid #bbf7d0; }
+        
+        .progress-header { 
+            display: flex; justify-content: space-between; 
+            font-size: 0.85rem; color: #94a3b8; font-weight: 600; margin-bottom: 0.5rem;
+        }
+        .chunk-count-badge {
+            background: #e2e8f0; padding: 2px 8px; border-radius: 12px; color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="setup-view">
+        <h2>Sentence Input</h2>
+        <p>Use <b>|</b> to separate your chunks.</p>
+        <textarea id="input-text" rows="5" placeholder="Enter sentence here...">Although the ancient library | was filled with dust and shadows | the young scholar discovered | a hidden compartment | within the mahogany desk | that contained a collection | of handwritten letters | from a long-forgotten era | of explorers.</textarea>
+        <button onclick="startStudy()">Start Memorizing</button>
+    </div>
+
+    <div id="study-view" class="hidden">
+        <div class="progress-header">
+            <span>CHUNKING PHASE</span>
+            <span id="card-progress">Left: 0</span>
+        </div>
+        <div class="card">
+            <div class="cue" id="card-cue">1</div>
+            <p>Type the specific phrase for this number:</p>
+            <input type="text" id="answer-input" autocomplete="off" placeholder="Type here...">
+            <div id="feedback" class="feedback"></div>
+        </div>
+        <button onclick="checkAnswer()">Check Answer</button>
+    </div>
+
+    <div id="rebuild-view" class="hidden">
+        <h2>Full Reconstruction</h2>
+        <p>You mastered all <span id="final-chunk-count" class="chunk-count-badge">0</span> chunks!<br>Now, type the full sentence from memory:</p>
+        <textarea id="rebuild-input" rows="5" placeholder="Type the entire sentence..."></textarea>
+        <div id="rebuild-feedback" class="feedback"></div>
+        <button onclick="checkFinal()">Verify Sentence</button>
+    </div>
+</div>
+
+<script>
+    let chunks = [];
+    let deck = [];
+    let fullSentence = "";
+
+    function startStudy() {
+        const input = document.getElementById('input-text').value;
+        if (!input.trim() || !input.includes('|')) {
+            alert("Please include at least one '|' to divide the sentence into chunks.");
+            return;
+        }
+
+        // Clean the full sentence for final verification
+        fullSentence = input.split('|').join(' ').replace(/\s+/g, ' ').trim();
+        // Clean individual chunks
+        chunks = input.split('|').map(s => s.trim());
+        
+        // Initial deck setup
+        deck = chunks.map((_, i) => i);
+        shuffle(deck);
+
+        showView('study-view');
+        nextCard();
+    }
+
+    function nextCard() {
+        if (deck.length === 0) {
+            document.getElementById('final-chunk-count').innerText = chunks.length;
+            showView('rebuild-view');
+            return;
+        }
+        
+        const inputField = document.getElementById('answer-input');
+        const feedback = document.getElementById('feedback');
+
+        document.getElementById('card-progress').innerText = `Remaining: ${deck.length}`;
+        document.getElementById('card-cue').innerText = deck[0] + 1;
+        
+        inputField.value = "";
+        feedback.innerText = "";
+        feedback.className = "feedback";
+        inputField.focus();
+    }
+
+    function checkAnswer() {
+        const inputField = document.getElementById('answer-input');
+        const feedback = document.getElementById('feedback');
+        
+        const userAnswer = inputField.value.trim().toLowerCase();
+        const correctAnswer = chunks[deck[0]].toLowerCase();
+
+        // Remove punctuation for easier matching if desired, 
+        // but here we match exactly what is in the chunk.
+        if (userAnswer === correctAnswer) {
+            feedback.className = "feedback correct";
+            feedback.innerText = "Correct! Well done.";
+            
+            // Success: Remove the current chunk from the deck
+            deck.shift(); 
+            
+            setTimeout(() => {
+                if (deck.length > 0) shuffle(deck);
+                nextCard();
+            }, 600);
+        } else {
+            // Failure: Keep the user here until they type it right
+            feedback.className = "feedback wrong";
+            feedback.innerText = `Incorrect. You must type: "${chunks[deck[0]]}"`;
+            
+            inputField.value = "";
+            inputField.focus();
+            // Note: deck.shift() is NOT called, so index remains deck[0]
+        }
+    }
+
+    function checkFinal() {
+        const input = document.getElementById('rebuild-input').value.trim().toLowerCase();
+        const feedback = document.getElementById('rebuild-feedback');
+        
+        // Normalize spaces and lowercase for comparison
+        const normalizedInput = input.replace(/\s+/g, ' ').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        const normalizedTarget = fullSentence.toLowerCase().replace(/\s+/g, ' ').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+
+        if (normalizedInput === normalizedTarget) {
+            alert("Perfect! You have fully memorized the sentence.");
+            location.reload(); // Restart app
+        } else {
+            feedback.className = "feedback wrong";
+            feedback.innerText = "Not quite right yet. Keep trying!";
+        }
+    }
+
+    function showView(viewId) {
+        document.getElementById('setup-view').classList.add('hidden');
+        document.getElementById('study-view').classList.add('hidden');
+        document.getElementById('rebuild-view').classList.add('hidden');
+        document.getElementById(viewId).classList.remove('hidden');
+        
+        if(viewId === 'rebuild-view') {
+            document.getElementById('rebuild-input').focus();
+        }
+    }
+
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Enter key support
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const studyVisible = !document.getElementById('study-view').classList.contains('hidden');
+            const rebuildVisible = !document.getElementById('rebuild-view').classList.contains('hidden');
+            
+            if (studyVisible) checkAnswer();
+            if (rebuildVisible) checkFinal();
+        }
+    });
+</script>
+
+</body>
+</html>

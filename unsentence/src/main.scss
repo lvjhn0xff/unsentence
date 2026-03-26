@@ -1,0 +1,161 @@
+body {
+    background-color: rgb(234, 234, 234);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('.//assets/fonts/Inter.ttf');
+}
+
+* {
+    font-family: Inter;
+    box-sizing: border-box;
+    // user-select: none;
+}
+
+[class$="Screen"] {
+    padding: 20px;
+    max-width: 500px;
+    margin: 10px auto 0 auto;
+}
+
+textarea, input, select {
+    border: 2.5px solid rgb(27, 27, 27);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    background-color: white;
+}
+
+textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+
+[class^="input-field"] {
+}
+
+.input-field-single {
+   
+}
+
+
+.input-field-double {
+    display: flex; 
+    flex-direction: row;  
+
+    .label {
+        flex: 1;
+    }
+
+    .value {
+        width: 30%;
+    }
+}
+
+
+button {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    background-color: rgb(50, 70, 80);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px black;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0px 0px 10px black;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Target the whole scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* width of the vertical scrollbar */
+  height: 5px; /* height of the horizontal scrollbar */
+}
+
+/* Target the track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Target the thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 5px;
+}
+
+/* Add a hover effect to the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #6e6e6e;
+}
+
+/* Target specific elements with overflow */
+.element-with-scroll {
+  overflow-y: scroll;
+}
+
+.element-with-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+/* ... additional styling for the element-with-scroll scrollbar ... */
+
+
+.centered {
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: rgb(50, 70, 80)
+}
+
+.screen-header {
+    .screen-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .screen-description {
+
+    }
+}
+
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-shadow: 0px 0px 2px black;
+}
+
+.link:active {
+    text-shadow: 0px 0px 5px black;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+.error {
+    color: rgb(231, 50, 50);
+    font-weight: bold;
+}

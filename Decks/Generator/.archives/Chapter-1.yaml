@@ -1,0 +1,296 @@
+Chapter-Number: 1
+Name: Database Application Development
+
+Objectives: 
+  - Define terms 
+  - Explain three components of client/server systems presentation, processing, and storage 
+  - Distinguish between two-tier and three tier architectures 
+  - Describe how to connect to database in 2-tier systems in 2-tier systems using VB.NET and Java 
+  - Describe key components and information flow in Web applications 
+  - Describe how to connect to databases in 3-tier applications using JSP, PHP, and ASP.NET 
+  - Explain the purpose of XML 
+  - See how XQuery can be used to query XML documents 
+  - Explain how XML fosters Web Services and SOAs 
+
+Sections: 
+  - Section-Name: Client/Server Architectures
+    Content:
+      Terminologies: 
+        Client: Workstation (usually a PC) that requests and uses a service 
+        Server: Computer (PC/mini/mainframe) that provides a service 
+      Notes: 
+        - Networked computing model.
+        - Processes distributed between clients and servers. 
+        - For DBMS, server is a database server. 
+
+  - Section-Name: Application Logic in C/S Systems
+    Content:
+      UnorderedSets :
+        Application Logic in C/S Systems: 
+          Tags: 
+            - Types
+          Items:
+            - Presentation Logic:
+              - GUI Interface 
+              - Input - keyboard/mouse 
+              - Output - monitor / printer 
+            - Processing Logic:
+              - Procedures, functions, and programs 
+              - I/O processing 
+              - Business rules 
+              - Data management
+            - Storage Logic:  
+              - DBMS activities
+              - Data storage/retrieval
+
+  - Section-Name: Application Partitioning
+    Content:  
+      Terminologies: 
+        Application Partitioning: Placing portions of the application code in different locations (client vs. server) after it is written. 
+      OrderedSets: 
+        Advantages of Application Partitioning: 
+          - Improved performance
+          - Improved interoperability 
+          - Balanced workloads 
+        Common Logic Distributions: 
+          - Fat Client 
+          - Thin Client 
+          - Distributed 
+          - Three Tier 
+          - N-tier
+      Illustrations: 
+        - Fat Client 
+        - Thin Client 
+        - Distributed 
+        - Three Tier 
+        - N-tier   
+
+  - Section-Name: Two-Tier Database Server Architectures
+    Content:
+      OrderedSets: 
+        Responsibilities of a Client Workstation: 
+          - Presentation Logic 
+          - Data Processing Logic 
+          - Business Rules Logic 
+        Roles of Server: 
+          - Performs data storage 
+          - Performs access 
+          - Performs processing 
+      Notes: 
+        - Typically called a database server. 
+        - DBMS is only on server. 
+
+  - Section-Name: Characteristics of Two-Tier Client/Server System
+    Content:
+      Notes:
+        - Departmental in scope (few users)
+        - Not mission-critical 
+        - Low transaction volumes 
+        - Common programming languages 
+        - Interface database via middleware APIs
+
+  - Section-Name: Middleware and APIs
+    Content:
+      Terminologies: 
+        - Middleware: Software that allows an application to interoperate with other software without requiring user to understand and code low-level operations
+        - Application Program Interface (API): Routines that an application uses to direct the performance of procedures by the computer's operating system. 
+      OrderedSets:
+        Common Database APIs:
+          - ODBC
+          - ADO 
+          - .NET 
+          - JDBC 
+
+  - Section-Name: Steps for Using Databases via Middleware and APIs: 
+    Content:
+      OrderedSets: 
+        Steps: 
+          - Identify and register a database driver 
+          - Open a connection to a database 
+          - Execute the query against the database 
+          - Process the results of the query 
+          - Repeat the steps 3-4 as necessary 
+          - Close the connection to the database 
+
+  - Section-Name: Thin Client
+    Content: 
+      OrderedSets: 
+        Parts of a Three-Tier Architecture: 
+          Client:
+            - GUI interface 
+            - Browser 
+          Application Server: 
+            - Business rules 
+            - Web Server 
+          Database Server:
+            - Data Storage 
+            - DBMS  
+
+      OrderedSets:
+        Defintitions of a Thin Client: 
+          - An application where the client (PC) accessing the application primarily provides the user interfaces and some application processing, usually with no or limited local data storage.
+          - PC just for user interface and a little application processing. Limited or no data storage (sometimes no hard drive)
+      Notes: 
+        - Routines that an application uses to direct the performance of procedures by the computer's operating system
+      Illustrations: 
+        - A database-enabled intranet/extranet environment.
+        - Generic Three-Tier Architecture 
+
+  - Section-Name: Web Application Components
+    Content:
+      Terminologies: 
+        Database Server: It hosts the DBMS 
+        Web Server: It receives and responds to browser requests using HTTP protocol.
+        Application Server: Software building blocks for creating dynamic web sites building blocks for creating dynamic web sites.
+        Web Browser: Client program that sends web requests and receives web pages.
+      UnorderedSets: 
+        Examples of Database Server: 
+          - Oracle 
+          - SQL Server
+          - Informix 
+          - MS Access 
+          - MySQL
+        Examples of Web Server:
+          - Apache 
+          - Internet Information Services (IIS)
+        Examples of Application Server: 
+          - MS ASP .NET framework 
+          - Jave EE 
+          - ColdFusion 
+          - PHP
+        Examples of Web Browser: 
+          - Internet Explorer 
+          - Firefox 
+          - Safari 
+          - Google Chrome
+
+  - Section-Name: Languages for Creating Web Pages
+    Content:
+      Terminologies: 
+        Hypertext Markup Language (HTML): Markup language specific for Web Pages 
+        Standard Generalized Markup Language (SGML): Markup language standard 
+        XHTML: XML-compiliant extension of HTML 
+        JavaScript/VBScript: Scripting languages that enable interactivity in HTML documents 
+        Cascading Stylesheets: Control appearance of Web elements in an HML document
+        XSL and XSLT: XMS style sheet and transformation to HTML
+
+  - Section-Name: Processing in 3-Tier Applications
+    Content:
+      Notes:
+        Static Page Requests:
+          - .htm or .html requests handled by the Web server
+        Dynamic Page Requests: 
+          - .jsp, .aspx, and .php requests are routed to the application server
+          - Server-side processing by JSP servlet, ASP .NET application, ColdFusion, or PHP
+          - XMS style sheet and tranDatabase access via JDBC, ADO .NET, or other database middlewaresformation to HTML
+      Illustrations: 
+        - Information flow in a three-tier architecture
+
+  - Section-Name: Considerations in 3-Tier Applications
+    Content:
+      Notes: 
+        Stored Procedures: 
+          - Code logic embedded in DBMS 
+          - Improve performance, but proprietary 
+        Transactions: 
+          - Involve many database updates 
+          - Either all must succeed, or non-should occur
+
+  - Section-Name: Benefits of Stored Procedures
+    Content:
+      Notes: 
+        - Performance improves for compiled SQL statements 
+        - Reduced network traffic 
+        - Improved security 
+        - Improved data integrity 
+        - Thinner clients
+
+  - Section-Name: Benefits of Three-Tier Architectures
+    Content:
+      Notes:
+        - Scalability 
+        - Technological flexibility 
+        - Long-term cost reduction
+        - Better match of systems to business needs 
+        - Improved customer service 
+        - Competitive advantage 
+        - Reduced risk 
+
+  - Section-Name: Cloud Computing
+    Content:
+      Terminologies: 
+        Cloud Computing: A model for creating ubiquituous, convenient, on-demand access to network services 
+        Characteristics: On-demand, broad network, resource pooling, rapid elasticity, measured service 
+      Examples: 
+        Types of Cloud Computing: 
+          - Infrastructure-as-a-Service (IaaS) 
+          - Platform-as-a-Service (PaaS) 
+          - Software-as-a-Service (SaaS)
+
+  - Section-Name: Extensible Markup Language (XML) 
+    Content:
+      Notes: 
+        - A text-based language (like HTML)
+        - Revolutionized the way data are exchanged over the Internet 
+        - Document Structure Declarations (DSD), XML Schema (XSD), and Relax NG replacing DTDs for validating XML document structure 
+        - XSD - language for defining XML databases, recommended by the W3C 
+
+  - Section-Name: Section-Name:Storing XML Documents
+    Content:
+      Notes: 
+        - Storing as files introduces the same file processing states in Ch 1
+      OrderedSets: 
+        - Four Common Options:
+          - Store XML data in a relational database by shredding the XML document 
+          - Store entire XML document in a large field (BLOB or CLOB) 
+          - Store the XML document using special XML columns 
+          - Store the XML document using a native XML database (non-relational) 
+
+  - Section-Name: Retrieving XML Documents
+    Content:
+      Terminologies: 
+        XPath  : One of a UnorderedSets XML technologies, 
+        XQuery : An XML transformation language that allows app
+
+  - Section-Name: Displaying XML Data
+    Content:
+      Terminologies:
+        Extensible Stylesheet Language Transformation (XLST):  A language used to transform complex XML documents and alos used to create HTML pages from XML documents 
+      Notes: 
+        - XSLT can translate a single XML document into both standard HTML and WAP/WML for cell phones without the necessity for two different pages
+
+  - Section-Name: XML and Web Services
+    Content:
+      Teminologies: 
+        Web Services: a UnorderedSets of emerging XML-based standards that define protocols for automatic communication between software programs over the Web
+        Universal Description, Discovery, and Integration (UDDI): standard for creating and distributing Web services
+        Web Services Description Language (WSDL): XML-based grammar for describing a Web Service and specifying its public interface
+        Simple Object Access Protocol (SOAP): XML-based communication protocol for sending messages between applications over the Internet
+
+  - Section-Name: Service Oriented Architecture (SOA)
+    Content:
+      Terminologies: 
+        Service Oriented Architecture (SOA): A collection of services that communicate with each other, usually by passing data or coordinating a business activity
+      Notes: 
+        - A new paradigm for IT application development, based mostly on Web services
+        - Loosely coupled, highly interoperable components.
+        - Leads to flexibility and shorter development time.
+
+  - Section-Name: Databases
+    Content:
+      Objects: 
+        MySQL: 
+          Tags:
+            - Database System 
+          Initial Release Date: May 23, 1995 
+          Creators: 
+            - David Axmark 
+            - Allan Larson 
+            - Finn Michael "Monty" Widenius 
+        David Axmark:  
+          Tags:
+            - Person
+          Country of Origin: Swedish 
+          Birthdate: May 28, 1962
+
+

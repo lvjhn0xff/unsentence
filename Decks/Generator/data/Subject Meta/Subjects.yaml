@@ -1,0 +1,282 @@
+- Code: MITC01 
+  Name: Technology and Project Management
+  Shortname: TPM
+  Chapter-Label: Chapter-Number
+  Chapters:
+    - Introduction to Project Management (Part 1)
+    - Introduction to Project Management (Part 2) 
+    - Sub-Items:
+        - Name: Project Scope Management 
+          Key: 3a
+        - Name: Project Time Management 
+          Key: 3b
+        - Name: Project Time Scheduling 
+          Key: 3c 
+
+    - Project Cost Management 
+    - Project Human Resource Management 
+    - Project Project Quality Management 
+    - Project Communications Management 
+    - Project Risk Management 
+
+- Code: MITC02 
+  Name: Advanced Database Systems 
+  Shortname: ADS
+  Chapter-Label: Chapter-Number 
+  Chapters: 
+    - Database Application Development 
+    - Data Warehousing 
+    - Data Quality and Integration 
+    - Big Data and Analytics 
+
+- Code: MITC03 
+  Name: Advanced System Design and Implementation 
+  Shortname: ASDI
+  Chapter-Label: Chapter-Number 
+  Chapters: 
+    - Assuming the Role of the System Analyst 
+    - Understanding Organization Style and Its Impact on Information Systems 
+    - Determining Feasibility and Managing Analysis and Design Activities 
+    - Information Gathering - Interactive Methods 
+    - Information Gathering - Unobtrusive Methods 
+    - Prototyping, Rad, and Extreme Programming 
+    - Using Data Flow Diagrams 
+    - Systems Requirements Analysis and Design 
+    - Describing Process Specifications and Structured Decisions 
+    - System Design Techniques 
+    - Designing Effective Output 
+    - Designing Effective Input  
+
+
+- Code: MITC04 
+  Name: Advanced Operating Sytems and Networking 
+  Shortname: AOSN
+  Parts: 
+    - Part-Name: Background
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Computer System Overview 
+        - Operating System Overview 
+    - Part-Name: Processes
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Process Description and Control 
+        - Threads 
+        - Concurrency - Mutual Exclusion and Synchronization 
+        - Concurrency - Deadlock and Starvation 
+    - Part-Name: Memory 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Memory Management 
+        - Virtual Memory 
+    - Part-Name: Scheduling 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Uniprocessor Scheduling 
+        - Multiprocessor, Multicore, and Real-Time Scheduling 
+    - Part-Name: Input/Output and Files 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - I/O Management and Disk Scheduling 
+        - File Management 
+    - Part-Name: Embedded Systems 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Embedded Operating Systems 
+        - Virtual Machines 
+        - Operating System Security 
+        - Cloud and IoT Operating Systems 
+    - Part-Name: Online Chapters 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Network Protocols 
+        - Distributed Processing, Client/Server, and Clusters 
+        - Distributed Process Management 
+        - Overview and Probability and Stochastic Processes 
+        - Queuing Analysis 
+    - Part-Name: Appendices 
+      Chapter-Label: Appendix-Letters 
+      Reset-Chapters: True  
+      Chapters: 
+        - Topics in Concurrency 
+        - Programming Projects and Operating System Projects 
+        - Topics in Computer Organization 
+        - Object-oriented Design 
+        - Amhdahl's Law 
+        - Hash Tables 
+        - Response Time 
+        - Queuing System Concepts 
+        - The Complexity of Algorithms 
+        - Disk Storage Devices 
+        - Cryptographic Algorithms 
+        - Standards Organizations 
+        - Sockets - A Programmer's Introduction 
+        - The International Reference Alphabet 
+        - BACI - The Ben-Ari Concurrent Programing System 
+        - Procedure Control 
+        - ECOS-Q1
+
+- Code: MITS03 
+  Name: Object-oriented Design Patterns 
+  Shortname: OODP
+  Subchapters: true
+  Parts:
+    - Part-Name: Introduction 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - What is a Design Pattern? 
+        - Design Patterns in Smalltalk MVC 
+        - Describing Design Patterns 
+        - The Catalog of Design Patterns 
+        - Organizing the Catalog 
+        - How Design Patterns Solve Design Problems 
+        - How to Select a Design Pattern 
+        - How to Use a Design Pattern 
+    - Part-Name: A Case Study 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Design Problems 
+        - Document Structure 
+        - Formatting 
+        - Embellishing the User Interface 
+        - Supporting Multiple Look-and-Feel Standards 
+        - Supporting Multiple Window Systems 
+        - User Operation 
+        - Spelling Checking and Hyphenations 
+        - Summary 
+    - Part-Name: Creational Patterns
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Abstract Factory 
+        - Builder 
+        - Factory Method
+        - Prototype 
+        - Singleton
+        - Discussion of Creational Patterns 
+    - Part-Name: Structural Patterns
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Adapter 
+        - Bridge
+        - Composite
+        - Decorator
+        - Facade
+        - Flyweight
+        - Proxy 
+        - Discussion of Structural Patterns 
+    - Part-Name: Behavioral Patterns
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Chain of Responsibility
+        - Command
+        - Interpreter
+        - Iterator
+        - Mediator
+        - Memento
+        - Observer
+        - State
+        - Strategy
+        - Template Method 
+        - Visitor
+        - Discussion of Behavioral Patterns
+    - Part-Name: Conclusion 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - What to Expect from Design Patterns
+        - A Brief History 
+        - The Pattern Community 
+        - An Invitation
+        - A Parting Thought
+    - Part-Name: Glossary 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Glossary  
+    - Part-Name: Guide to Notation 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - Class Diagram 
+        - Object Diagram 
+        - Interaction Diagram 
+    - Part-Name: Foundation Classes 
+      Chapter-Label: Part-Bullet
+      Chapters: 
+        - List Class 
+        - Iterator Class 
+        - ListIterator Class 
+        - Point Class 
+        - Rect Class  
+
+- Code: MITS04 
+  Name: Web Engineering 
+  Shortname: WE
+  Chapter-Label: Chapter-Number
+  Chapters: 
+    - Web-Based Systems 
+    - Web Engineering 
+    - A Web Engineering Process
+    - Communication 
+    - Planning 
+    - The Modeling Activity 
+    - Analysis Modeling for WebApps 
+    - WebApp Design 
+    - Interaction Design
+    - Information Design 
+    - Functional Design 
+    - Construction and Deployment 
+    - Design Patterns 
+    - Technologies and Tools 
+    - Testing WebApps 
+    - Change and Content Management 
+    - Future Directions  
+  Extra-Chapters:
+    - The Software Process 
+    - Process Models 
+    - Agility and Process
+    - Recommended Process Model
+    - Human Aspects of SE
+    
+- Code: MITS06
+  Name: Network Administration and Maintenance 
+  Shortname: NAM
+  Chapter-Label: Chapter-Number 
+  Parts: 
+    - Part-Name: Introduction 
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Introduction to Data Communications
+
+    - Part-Name: Fundamental Concept  
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Application Layer
+        - Physical Layer
+        - Data Link Layer
+        - Network and Transport Layers
+
+    - Part-Name: Network Technologies  
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Wired and Wireless Local Area Networks
+        - Namebone Networks
+        - Wide Area Networks
+        - The Internet
+
+    - Part-Name: Network Management  
+      Chapter-Label: Chapter-Number 
+      Chapters: 
+        - Network Security
+        - Network Design
+        - Network Management
+
+    - Part-Name: Appendices 
+      Chapter-Label: Appendix-Letters 
+      Reset-Chapters: true
+      Chapters: 
+        - Connector Cables
+        - Spanning Tree Protocol
+        - IP Telephony
+        - Cellular Technologies
+        - TCP/IP Game
+        - Windows Server
+
+
